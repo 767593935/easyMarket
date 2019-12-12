@@ -1,0 +1,16 @@
+const { override, fixBabelImports, addLessLoader, addStylusLoader } = require('customize-cra');
+
+module.exports = override(
+  fixBabelImports('import', {
+    libraryName: 'antd-mobile',
+    style: true,
+  }),
+  addLessLoader({
+    javascriptEnabled: true,
+    modifyVars: { '@primary-color': '#1DA57A' },
+  }),
+  addStylusLoader({
+    javascriptEnabled: true,
+    modifyVars: { '@primary-color': '#1DA57A' },
+  })
+);
