@@ -1,0 +1,39 @@
+.tab{
+  position: fixed;
+  z-index:100;
+  bottom: 0;
+  border-top: 0.0625rem solid #ccc;
+  width: 100%;
+  height: 3rem;
+  background-color: #fff;
+  .tabItem{
+    float: left;
+    width: 20%;
+    height: 3rem;
+    // background-color: chocolate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .itemIcon{
+      text-align: center;
+      width: 100%;
+      height: 1.875rem;
+      line-height: 1.875rem;
+    }
+    .itemName{
+      text-align: center;
+      width: 100%;
+      height: 1.05rem;
+    }
+    &.active{
+      color: cornflowerblue;
+      animation: theanimation .5s;
+    }
+  }
+   
+}
+@keyframes theanimation{ 
+  from {transform: scale(1);} 
+  to {transform: scale(1.5);} 
+} 
+  
