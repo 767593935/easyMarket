@@ -51,7 +51,7 @@ export default[
 
   {
     exact:true,
-    path:'/login',
+    path:'/',
     component:Login
   },
   {

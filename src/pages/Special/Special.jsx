@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // 引入路由
-import { NavLink, Route, Switch } from 'react-router-dom'
+import { NavLink} from 'react-router-dom'
 //引入样式文件
 import '../Special/Special.less'
 //引入组件
@@ -27,7 +27,9 @@ export default class Special extends Component {
   render () {
     const data = this.state.data
     return (
+    
       <div className='specialContainer'>
+          {/* 专题页面*/}
         <ul className='nav nav_tabs' >
           {
             data.map((item, index) => {

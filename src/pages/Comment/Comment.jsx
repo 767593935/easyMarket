@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import '../Comment/Comment.less'
 import { Icon  } from 'antd-mobile';
-import { getTopicDetail, getTopicDetailRelated ,getCommentList} from '../../api/index.js'
+import { getCommentList} from '../../api/index.js'
 //引入子组件
 import ajax from "../../api/index"
 export default class Comment extends Component {
@@ -11,7 +11,7 @@ export default class Comment extends Component {
     
   }
   async componentDidMount () {
-   console.log(this.props)
+   
     const result2= await ajax.getCommentList({
       valueId: this.props.match.params.id,
       typeId: 1,
@@ -29,6 +29,7 @@ export default class Comment extends Component {
     const {commentDetail} = this.state
     return (
       <div className="CommentContainer">
+          {/* 专题评论页面*/}
          <div className='messages_header' >
          <Icon type="left" className='left' onClick={()=>(this.props.history.goBack())} />
         <span className="title">查看更多评论</span>

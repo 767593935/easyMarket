@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 //引入样式
 import '../Messages/Messages.less'
-import PropTypes from 'prop-types'
+
 //引入icon图片
 import { Icon } from 'antd-mobile';
-import { NavLink, Route, Switch } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { getTopicDetail, getTopicDetailRelated ,getCommentList} from '../../api/index.js'
 //引入子组件
 import ajax from "../../api/index"
@@ -12,6 +12,7 @@ export default class Messages extends Component {
   state = {
     detailRelated: [],
     commentDetail:[],
+    detailTop:{},
     id:""
     
     
@@ -29,30 +30,35 @@ export default class Messages extends Component {
       page:1,
       size:5
     })
+    const result3= await ajax.getTopicDetail({
+      id: this.props.match.params.id,
+    })
+    
     const commentDetail=result2.data
-     console.log(commentDetail)
+     
     const detailRelated = result1
     const id =this.props.match.params.id
-    
+    const detailTop=result3
+   
     this.setState({
       detailRelated: detailRelated,
       commentDetail:commentDetail,
-      id:id
+      id:id,
+      detailTop:detailTop
     
     })
-    console.log(this.state.id)
+    
   }
 
   render () {
-    
-    const { detailRelated ,commentDetail,id} = this.state
-   
-    
+    const { detailRelated ,commentDetail,id,detailTop} = this.state
+ 
     return (
       <div className='messagesContainer'>
+          {/* 专题详情页*/}
         <div className='messages_header' >
           <Icon type="left" className='left' onClick={() => (this.props.history.goBack())} />
-          <span className="title">一次解决5个节日送礼难题</span>
+    <span className="title">{detailTop.title}</span>
         </div>
         <div className="message_img">
           <img src="//yanxuan.nosdn.127.net/75c55a13fde5eb2bc2dd6813b4c565cc.jpg" alt="" />
@@ -65,6 +71,7 @@ export default class Messages extends Component {
         </div>
         <div className="message_wrap">
           <div className="titleLine">
+            {/* 精选留言 */}
             <div className="titleName">精选留言</div>
             <div className="titleIcon">
               <NavLink to={`/detail/${id}`} push >
@@ -101,6 +108,7 @@ export default class Messages extends Component {
             </li>
            */}</ul>
           {/*   <a href="###"> 查看更多评论 </a> */}
+             {/* 评论页面*/}
           <NavLink to={`/comment/${id}`} className="moreComment">查看更多评论</NavLink>
         </div>
         <div className="relateTopic">

@@ -1,8 +1,8 @@
-﻿/**
+/**
  * 
  * npm start  运行项目
  * 打包: npm run build 
- *  运行打包文件: serve build 
+ * 运行打包文件: serve build 
  * 需要样式的重置文件: github上搜索reset css 就可以了
  * 在assets目录中添加一个css目录,里面有一个reset.css文件,我是在index.js中引入
  * 
