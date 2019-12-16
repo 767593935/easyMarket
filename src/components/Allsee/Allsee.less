@@ -1,0 +1,43 @@
+.allSee{
+  background: #fff;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  .allSeeP{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color:#2196F3 ;
+    height: 40px;
+    line-height: 40px;
+    
+  }
+  .allSeeUl{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+    .allSeeLi{
+      width: 50%;
+     
+      box-sizing: border-box;
+      border-bottom: 1px solid #999;
+      &:nth-child(odd){
+        border-right: 1px solid #999;
+       
+      }
+      img{
+        width: 100%;
+      }
+      .allSeeName{
+        color: #000;
+        text-align: center;
+      }
+      .allSeePrice{
+        color: red;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+}

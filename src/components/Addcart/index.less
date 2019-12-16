@@ -1,0 +1,58 @@
+.mast{
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+}
+.cartStyle{
+  position: fixed;
+  bottom: 0;
+  z-index: 11;
+  background: #fff;
+  .top{
+    // width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    .imgstyle{
+      display: flex;
+      img{
+        width: 30%;
+      }
+      .chooseStyle{
+        font-size: 16px;
+        line-height: 30px;
+        color: #777;
+        span{
+          color: red;
+        }
+      }
+    }
+    .error{
+      color: red;
+    }
+    .chooseStyle{
+      width: 60%;
+    }
+  }
+  .center{
+    padding:0 10px;
+  }
+  .bottom{
+    display: flex;
+    text-align: center;
+    .addCar{
+      
+      background: linear-gradient(#FF9005,#FF6236);
+      width: 50%;
+      a{
+        color: #000;
+      }
+    }
+    .buy{
+      background: linear-gradient(#1D69F1,#19CFFC);
+      width: 50%;
+
+    }
+  }
+}

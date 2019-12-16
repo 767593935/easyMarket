@@ -1,0 +1,270 @@
+.outer{
+  width: 100%;
+  header{
+    height: 50px;
+    display: flex;
+    line-height: 50px;
+    font-size: 16px;
+    .lt{
+      flex-grow: 1;
+      padding-left: 10px;
+    }
+    .name{
+      flex-grow: 1;
+    }
+  }
+  .am-wingblank.am-wingblank-lg{
+    margin: 0;
+  }
+  .am-wingblank{
+    margin: 0;
+  }
+  .condition{
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    background: #e6e3e3;
+    line-height: 40px;
+    font-size: 12px;
+    span{
+      color: red;
+      margin-right: 5px;
+
+      }
+  }
+  .desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 20px;
+    
+    .title{
+      font-size: 22px;
+    }
+    .feature{
+      margin: 12px 0 15px;
+    }
+    .price{
+      font-size: 18px;
+      color: red;
+      font-weight: bold;
+    }
+  }
+  .select{
+    height: 40px;
+    line-height: 40px;
+    border-top: 1px solid #ddd;
+    border-bottom: 10px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px;
+    .count{
+      color: red;
+      font-weight: bold;
+    }
+    .choose{
+      margin: 0 20px 0 10px;
+    }
+  }
+  .comments{
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 0 20px;
+    .commentsTop{
+      display: flex;
+      justify-content: space-between;
+      height: 40px;
+      line-height: 40px;
+     
+      font-size: 16px;
+    }
+    .allComponent{
+      .top{
+        justify-content: space-between;
+        display: flex;
+        span{
+          &:nth-child(2){
+            color: #666;
+            line-height: 30px;
+          }
+        }
+        
+      }
+      .center{
+        line-height: 20px;
+        color: #999;
+        img{
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+  .parameter{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    .good_params{
+      font-size: 16px;
+      font-weight: bold;
+      margin: auto;
+      color:#2196F3 ;
+      height: 40px;
+      line-height: 40px;
+    }
+    .good_attrs{
+      padding: 0 20px 20px 20px;
+      .good_arrtsDes{
+        line-height: 25px;
+        display: flex;
+        background:#DCDFE6;
+        font-size: 16px;
+        margin-bottom: 8px;
+        align-items: center;
+       
+        .attrName{
+          width: 100px;
+          text-align: center;
+          padding: 10px;
+          color: #888;
+        
+        }
+        .attrValue{
+          width: 200px;
+          flex-wrap: wrap;
+        }
+      }
+    }
+
+  }
+  .infoGoodsDesc{
+    width: 100%;
+    margin-bottom: 20px;
+    
+    img{
+      width: 100%;
+    }
+  }
+  .commonProblem{
+    padding: 0  20px;
+    background: #fff;
+    // background: #ace;
+    .commonProblemP{
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      color:#2196F3 ;
+      height: 40px;
+      line-height: 40px;
+      
+    }
+    .commonProblemUl{
+      .commonProblemLi{
+        .commonProblemQ{
+          font-size: 16px;
+          padding: 10px 0;
+          span{
+            color: red;
+            margin-right: 5px;
+          }
+        }
+        .commonProblemS{
+          line-height: 20px;
+          color: #999;
+          font-size: 14px;
+        }
+      }
+    }
+    
+  }
+  .allSee{
+    background: #fff;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    .allSeeP{
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      color:#2196F3 ;
+      height: 40px;
+      line-height: 40px;
+      
+    }
+    .allSeeUl{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      
+      .allSeeLi{
+        width: 50%;
+       
+        box-sizing: border-box;
+        border-bottom: 1px solid #999;
+        &:nth-child(odd){
+          border-right: 1px solid #999;
+         
+        }
+        img{
+          width: 100%;
+        }
+        .allSeeName{
+          color: #000;
+          text-align: center;
+        }
+        .allSeePrice{
+          color: red;
+          text-align: center;
+          height: 30px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+  .add{
+    width: 100%;
+    position: fixed;
+    background: #fff;
+    z-index: 10;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    .icon{
+      display: flex;
+      width: 40%;
+      justify-content: space-around;
+      .iconfont{
+        color: #ccc;
+        font-size: 28px;
+        flex-flow: 1;
+        &:nth-child(2){
+          font-size: 20px;
+          color: #2196F3;
+          position: relative;
+        }
+        span{
+          position: absolute;
+          color:red;
+          font-size:16px;
+          font-weight: bold;
+          top: -10px;
+        }
+      }
+    }
+    .more{
+      display: flex;
+      color: #fff;
+      font-size: 14px;
+      .addCart{
+        background: linear-gradient(#FF9005,#FF6236);
+        padding: 0 20px;
+      }
+      .buyNow{
+        background: linear-gradient(#1D69F1,#19CFFC);
+        padding: 0 20px;
+      }
+    }
+  }
+}
