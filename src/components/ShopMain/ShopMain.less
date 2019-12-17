@@ -1,0 +1,58 @@
+// 中间
+.main {
+  margin-top: 40px;
+  margin-bottom: 55px;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  // background-color: #666;
+  li {
+    width: 100%;
+    padding: 10px 0;
+    height: 90px;
+    background-color: #fff;
+    margin-top: 3px;
+
+    .CheckboxItem {
+      height: 90px;
+      display: flex;
+      justify-content: flex-start;
+      .am-list-content {
+        display: flex;
+        justify-content: flex-start;
+        img {
+          width: 90px;
+          height: 90px;
+          background-color: #ccc;
+        }
+        .detail {
+          width: 100%;
+          height: 80px;
+          padding: 5px;
+          color: #666;
+          // padding: 10px ;
+          // float: right;
+          display: flex;
+          justify-content: space-between;
+          .value {
+            width: 180px;
+            margin-left: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            // align-items: center;
+            .money {
+              color: red;
+            }
+            p{
+              overflow: hidden;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#detail {
+  font-size: 12px;
+}
